@@ -15,7 +15,7 @@ namespace ExemplosPadroesProjeto.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.8-servicing-32085")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -56,6 +56,16 @@ namespace ExemplosPadroesProjeto.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("Movel");
                 });
 
+            modelBuilder.Entity("ExemplosPadroesProjeto.Models.Moveis.Barroco.ArmarioBarroco", b =>
+                {
+                    b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
+
+
+                    b.ToTable("ArmarioBarroco");
+
+                    b.HasDiscriminator().HasValue("ArmarioBarroco");
+                });
+
             modelBuilder.Entity("ExemplosPadrõesProjeto.Models.Moveis.Barroco.CadeiraBarroca", b =>
                 {
                     b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
@@ -64,6 +74,26 @@ namespace ExemplosPadroesProjeto.Migrations
                     b.ToTable("CadeiraBarroca");
 
                     b.HasDiscriminator().HasValue("CadeiraBarroca");
+                });
+
+            modelBuilder.Entity("ExemplosPadroesProjeto.Models.Moveis.Barroco.EscrivaninhaBarroca", b =>
+                {
+                    b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
+
+
+                    b.ToTable("EscrivaninhaBarroca");
+
+                    b.HasDiscriminator().HasValue("EscrivaninhaBarroca");
+                });
+
+            modelBuilder.Entity("ExemplosPadrõesProjeto.Models.Moveis.Barroco.MesaBarroca", b =>
+                {
+                    b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
+
+
+                    b.ToTable("MesaBarroca");
+
+                    b.HasDiscriminator().HasValue("MesaBarroca");
                 });
 
             modelBuilder.Entity("ExemplosPadrõesProjeto.Models.Moveis.CadeiraFuturista", b =>
@@ -76,14 +106,24 @@ namespace ExemplosPadroesProjeto.Migrations
                     b.HasDiscriminator().HasValue("CadeiraFuturista");
                 });
 
-            modelBuilder.Entity("ExemplosPadrõesProjeto.Models.Moveis.MesaBarroca", b =>
+            modelBuilder.Entity("ExemplosPadroesProjeto.Models.Moveis.Futurista.ArmarioFuturista", b =>
                 {
                     b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
 
 
-                    b.ToTable("MesaBarroca");
+                    b.ToTable("ArmarioFuturista");
 
-                    b.HasDiscriminator().HasValue("MesaBarroca");
+                    b.HasDiscriminator().HasValue("ArmarioFuturista");
+                });
+
+            modelBuilder.Entity("ExemplosPadroesProjeto.Models.Moveis.Futurista.EscrivaninhaFuturista", b =>
+                {
+                    b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
+
+
+                    b.ToTable("EscrivaninhaFuturista");
+
+                    b.HasDiscriminator().HasValue("EscrivaninhaFuturista");
                 });
 
             modelBuilder.Entity("ExemplosPadrõesProjeto.Models.Moveis.MesaFuturista", b =>
@@ -94,6 +134,46 @@ namespace ExemplosPadroesProjeto.Migrations
                     b.ToTable("MesaFuturista");
 
                     b.HasDiscriminator().HasValue("MesaFuturista");
+                });
+
+            modelBuilder.Entity("ExemplosPadroesProjeto.Models.Moveis.Rustico.ArmarioRustico", b =>
+                {
+                    b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
+
+
+                    b.ToTable("ArmarioRustico");
+
+                    b.HasDiscriminator().HasValue("ArmarioRustico");
+                });
+
+            modelBuilder.Entity("ExemplosPadroesProjeto.Models.Moveis.Rustico.CadeiraRustica", b =>
+                {
+                    b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
+
+
+                    b.ToTable("CadeiraRustica");
+
+                    b.HasDiscriminator().HasValue("CadeiraRustica");
+                });
+
+            modelBuilder.Entity("ExemplosPadroesProjeto.Models.Moveis.Rustico.EscrivaninhaRustica", b =>
+                {
+                    b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
+
+
+                    b.ToTable("EscrivaninhaRustica");
+
+                    b.HasDiscriminator().HasValue("EscrivaninhaRustica");
+                });
+
+            modelBuilder.Entity("ExemplosPadroesProjeto.Models.Moveis.Rustico.MesaRustica", b =>
+                {
+                    b.HasBaseType("ExemplosPadrõesProjeto.Models.Moveis.Movel");
+
+
+                    b.ToTable("MesaRustica");
+
+                    b.HasDiscriminator().HasValue("MesaRustica");
                 });
 
             modelBuilder.Entity("ExemplosPadrõesProjeto.Models.Moveis.Movel", b =>

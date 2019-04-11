@@ -16,6 +16,8 @@ namespace ExemplosPadrõesProjeto.Models.Moveis
         [DisplayName("Futurista")]
             Futurista,
         [DisplayName("Barroco")]
-            Barroco
+            Barroco,
+        [DisplayName("Rústico")]
+            Rustico
     }
 }
